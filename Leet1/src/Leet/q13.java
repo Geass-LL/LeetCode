@@ -7,6 +7,7 @@ import java.util.Map;
  * 考虑到类似IX这样的前置小数最多1位，一直让sum记录上一位的num；
  * 当出现num>sum时，即XIV情况出现，res在之前已经加了上一们的num即当前的sum的情况下，减去两个sum再加上当前的num；这之后更新sum
  * 当为num<sum时，即XI这种情况，直接加上当前的num即可，更新res，
+ * 效果不错，98.77%
  */
 public class q13 {
 	public int romanToInt(String s) {
