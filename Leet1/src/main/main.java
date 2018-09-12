@@ -7,8 +7,9 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String test="VI";
-		q13 solution=new q13();
-		int res=solution.romanToInt(test);
+		int testint=58;
+		q12 solution=new q12();
+		String res=solution.intToRoman(testint);
 		System.out.println(res);
 	}
 
