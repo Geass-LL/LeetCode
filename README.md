@@ -1,4 +1,4 @@
-Question of LeetCode
+Questions of LeetCode
 
 
 All answers are written in java.
