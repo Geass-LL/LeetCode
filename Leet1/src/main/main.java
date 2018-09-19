@@ -6,10 +6,9 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s="aaa";
-		String p="ab*a*c*a";
-		q10 solution=new q10();
-		boolean res=solution.isMatch(s, p);
+		String[] strs= {"ujao","h","ujio"};
+		q14 solution=new q14();
+		String res=solution.longestCommonPrefix(strs);
 		System.out.println(res);
 	}
 
