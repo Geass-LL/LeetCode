@@ -8,9 +8,10 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] nums= {-1, 0, 1, 2, -1, -4};
-		q17 solution=new q17();
-		System.out.println(solution.letterCombinations("1"));
+		q18 solution=new q18();
+		int[] nums= {-1,-5,-5,-3,2,5,0,4};
+		List<List<Integer>> res=solution.fourSum(nums, -7);
+		System.out.println(res);
 	}
 
 }
