@@ -2,16 +2,26 @@ package main;
 
 import java.util.List;
 
+import DS.ListNode;
 import Leet.*;
 
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q18 solution=new q18();
-		int[] nums= {-1,-5,-5,-3,2,5,0,4};
-		List<List<Integer>> res=solution.fourSum(nums, -7);
-		System.out.println(res);
+		q19 solution=new q19();
+		ListNode ori=new ListNode(1);
+		ListNode oldnode=ori;
+		for(int i=2;i<10;i++) {
+			ListNode newnode=new ListNode(i);
+			oldnode.next=newnode;
+			oldnode=newnode;
+		}
+		ListNode curnode=solution.removeNthFromEnd(ori, 4);
+		while(curnode!=null) {
+			System.out.println(curnode.val);
+			curnode=curnode.next;
+		}
 	}
 
 }
