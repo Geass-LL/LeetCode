@@ -9,9 +9,9 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q20 solution=new q20();
-		String s="[()]{}]";
-		System.out.println(solution.isValid(s));
+		q22 solution=new q22();
+		int test=3;
+		solution.generateParenthesis(6);
 	}
 
 }
