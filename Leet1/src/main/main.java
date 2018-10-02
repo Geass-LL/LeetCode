@@ -25,5 +25,4 @@ public class main {
 			res=res.next;
 		}
 	}
-
 }
