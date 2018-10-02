@@ -9,9 +9,11 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q22 solution=new q22();
-		int test=3;
-		solution.generateParenthesis(6);
+		q22_succ solution=new q22_succ();
+		int test=8;
+		for (String eachres:solution.generateParenthesis(test)) {
+			System.out.println(eachres);
+		}
 	}
 
 }
