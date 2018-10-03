@@ -9,7 +9,7 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q24 solution=new q24();
+		q25 solution=new q25();
 		ListNode test=new ListNode(1);
 		ListNode head=test;
 		for (int i=2;i<10;i++) {
@@ -17,7 +17,6 @@ public class main {
 			test=test.next;
 		}
 		head.Show();
-		ListNode res=solution.swapPairs(head);
-		res.Show();
+		solution.reverseKGroup(head, 11).Show();
 	}
 }

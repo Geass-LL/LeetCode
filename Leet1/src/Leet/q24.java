@@ -1,7 +1,9 @@
 package Leet;
 
 import DS.ListNode;
-
+/*
+ * In OneNote
+ */
 public class q24 {
     public ListNode swapPairs(ListNode head) {
         ListNode now=head;
