@@ -9,14 +9,13 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q25 solution=new q25();
-		ListNode test=new ListNode(1);
-		ListNode head=test;
-		for (int i=2;i<10;i++) {
-			test.next=new ListNode(i);
-			test=test.next;
+		q26 solution=new q26();
+		int[] test= {};
+		int length=solution.removeDuplicates(test);
+		System.out.println(length);
+		for (int i=0;i<length;i++) {
+			System.out.println(test[i]);
 		}
-		head.Show();
-		solution.reverseKGroup(head, 11).Show();
+			
 	}
 }
