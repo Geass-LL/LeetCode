@@ -9,13 +9,12 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q30 solution=new q30();
+		q31 solution=new q31();
 		//------------------------------------------
-		String s="wordgoodgoodgoodbestword";
-		String[] words= {"word","good","best","good"};
-		List<Integer> res=solution.findSubstring(s, words);
-		for (int eachres:res) {
-			System.out.println(eachres);
+		int[] nums= {1,4,3,3};
+		solution.nextPermutation(nums);
+		for(int num:nums) {
+			System.out.println(num);
 		}
 	}
 }
