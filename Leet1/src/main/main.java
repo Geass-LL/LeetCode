@@ -9,10 +9,9 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q28 solution=new q28();
+		q29 solution=new q29();
 		//------------------------------------------
-		String str1="hello";
-		String str2="ll";
-		System.out.println(solution.strStr(str1, str2));
+		int test=2147483647;
+		System.out.println(solution.divide(test, 1));
 	}
 }
