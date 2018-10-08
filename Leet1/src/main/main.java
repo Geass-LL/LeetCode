@@ -9,9 +9,9 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q32 solution=new q32();
+		q33 solution=new q33();
 		//------------------------------------------
-		String s=")()())";
-		System.out.println(solution.longestValidParentheses(s));
+		int[] nums= {4,5,6,7,8,1,2,3};
+		System.out.println(solution.search(nums, 8));
 	}
 }
