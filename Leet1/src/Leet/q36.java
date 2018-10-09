@@ -1,5 +1,10 @@
 package Leet;
-
+/*
+ * 根据题目的要求，board一定是9*9的char;
+ * 维护三个数组，一个为行，一个为列，一个为小盒子；数组a[i]=N，表示数字i+1出现了N次，判断如果N>1，则返回false；
+ * num3的序号需要特别注意，容易出错。
+ * 判断是否为-3是区别‘.’和其他非数字字符。
+ */
 public class q36 {
 	public boolean isValidSudoku(char[][] board) {
 		for(int i=0;i<9;i++) {
