@@ -9,9 +9,12 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q33 solution=new q33();
+		q34 solution=new q34();
 		//------------------------------------------
-		int[] nums= {4,5,6,7,8,1,2,3};
-		System.out.println(solution.search(nums, 8));
+		int[] nums= {1,2,3,3,3,3,4,5,9};
+		int[] res=solution.searchRange(nums,3);
+		for(int eachres:res) {
+			System.out.println(eachres);
+		}
 	}
 }
