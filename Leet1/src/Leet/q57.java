@@ -6,6 +6,7 @@ import DS.Interval;
 
 /*
  * 利用56即可，把新增加的元素加进去，然后重新融合。
+ * 更好的办法在Q56_new,见OneNote 57.
  */
 public class q57 {
 	public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
