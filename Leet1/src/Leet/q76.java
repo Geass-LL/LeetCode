@@ -7,14 +7,14 @@ import java.util.*;
 public class q76 {
     public String minWindow(String s, String t) {
     	String res="";
-    	if(t.length()==0||s.length()==0)
+    	if(t.length()>s.length())
     		return "";
     	//先建一个Map，key是char，value是char出现的次数
     	Map map=new HashMap<Character,Integer>();
     	for (int i=0;i<t.length();i++) {
     		char tempkey=t.charAt(i);
     		if(map.containsKey(tempkey))
-    			map.replace(tempkey, (int)map.get(tempkey)+1);
+    			map.put(tempkey, (int)map.get(tempkey)+1);
     		else
     			map.put(tempkey, 1);
     	}
@@ -30,7 +30,7 @@ public class q76 {
 					int curvalue=(int)tempmap.get(tempkey);
 					if(curvalue==1)
 						count++;
-					tempmap.replace(tempkey, curvalue-1);
+					tempmap.put(tempkey, curvalue-1);
 				}
 				right++;
 			}
@@ -41,7 +41,7 @@ public class q76 {
 					if(tempmap.containsKey(tempkey)) {
 						int curvalue=(int)tempmap.get(tempkey);
 						if(curvalue<0) {
-							tempmap.replace(tempkey, curvalue+1);//去掉一层重复
+							tempmap.put(tempkey, curvalue+1);//去掉一层重复
 						}else {
 							if(right-left<res.length()||res=="")
 								res=s.substring(left, right);
