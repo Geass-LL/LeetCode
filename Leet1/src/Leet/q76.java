@@ -9,6 +9,7 @@ public class q76 {
     	String res="";
     	if(t.length()==0||s.length()==0)
     		return "";
+    	//先建一个Map，key是char，value是char出现的次数
     	Map map=new HashMap<Character,Integer>();
     	for (int i=0;i<t.length();i++) {
     		char tempkey=t.charAt(i);
@@ -21,6 +22,7 @@ public class q76 {
 		while(left<s.length()) {
 			int count=0;
 			right=left;
+			//每次从当前的left出发，得到能满足条件的最小序列
 			Map tempmap=new HashMap(map);
 			while(count<map.size()&&right<s.length()) {
 				char tempkey=s.charAt(right);
@@ -32,18 +34,19 @@ public class q76 {
 				}
 				right++;
 			}
+			//这个最小序列已经得到，并且位于left和right之间，temp的负数值表示可以允许多少重复；
 			if(count==map.size()) {
 				while(left<right) {
 					char tempkey=s.charAt(left);
 					if(tempmap.containsKey(tempkey)) {
 						int curvalue=(int)tempmap.get(tempkey);
 						if(curvalue<0) {
-							tempmap.replace(tempkey, curvalue+1);
+							tempmap.replace(tempkey, curvalue+1);//去掉一层重复
 						}else {
 							if(right-left<res.length()||res=="")
 								res=s.substring(left, right);
 							left++;
-							while(left<s.length()&&!map.containsKey(s.charAt(left)))
+							while(left<s.length()&&!map.containsKey(s.charAt(left)))//更新left
 								left++;
 							break;
 						}
