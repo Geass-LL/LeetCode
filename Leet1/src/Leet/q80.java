@@ -9,6 +9,7 @@ public class q80 {
     	if(length<=2) {
     		return length;
     	}
+    	/*
     	int left=1,count=0;
     	for(int right=1;right<length;right++) {
     		if(nums[right]!=nums[right-1]) {
@@ -22,6 +23,13 @@ public class q80 {
     				nums[left]=nums[right];
     				left++;
     			}
+    		}
+    	}*/
+    	int left=2;
+    	for(int right=2;right<length;right++) {
+    		if(nums[right]>nums[left-2]) {
+    			nums[left]=nums[right];
+    			left++;
     		}
     	}
     	return left;
