@@ -3,7 +3,7 @@ package Leet;
 import java.util.HashMap;
 import java.util.Map;
 
-public class q8 {
+public class q08 {
     public int myAtoi(String str) {
         int res=0;
         boolean flag=false;
