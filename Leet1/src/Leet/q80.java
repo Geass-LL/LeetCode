@@ -27,7 +27,7 @@ public class q80 {
     	}*/
     	int left=2;
     	for(int right=2;right<length;right++) {
-    		if(nums[right]>nums[left-2]) {
+    		if(nums[right]!=nums[left-2]) {
     			nums[left]=nums[right];
     			left++;
     		}
