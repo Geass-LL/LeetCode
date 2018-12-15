@@ -1,5 +1,8 @@
 package Leet;
 
+/*
+ * ©ирт╡н©╪
+ */
 public class q153 {
 	public int findMin(int[] nums) {
 		int length=nums.length;
