@@ -11,7 +11,8 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		q101 solution=new q101();
-		
+		q154 solution=new q154();
+		int[] nums= {2,2,2,0,1};
+		System.out.print(solution.findMin(nums));
 	}
 }
