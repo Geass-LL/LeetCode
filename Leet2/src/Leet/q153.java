@@ -6,7 +6,7 @@ package Leet;
 public class q153 {
 	public int findMin(int[] nums) {
 		int length=nums.length;
-		int left=0,right=length-1,res=0;
+		int left=0,right=length-1;
 		while(left+1<right) {
 			int mid=(left+right)/2;
 			if(nums[mid]<nums[0]&&nums[mid]<nums[length-1]) {
