@@ -5,13 +5,12 @@ public class q167 {
 		int[] res= {0,0};
         for(int i=0;i<numbers.length;i++) {
         	int searchvalue=target-numbers[i];
-        	int left=i,right=numbers.length-1;
+        	int left=i+1,right=numbers.length-1;
         	while(left<=right) {
         		int mid=(left+right)/2;
         		if(numbers[mid]==searchvalue) {
         			res[0]=i+1;
         			res[1]=mid+1;
-        			if(res[0]==res[1]) res[1]++;
         			return res;
         		}else if(numbers[mid]<searchvalue) {
         			left=mid+1;
