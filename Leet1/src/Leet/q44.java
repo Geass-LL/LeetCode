@@ -5,12 +5,12 @@ package Leet;
  */
 public class q44 {
 	public boolean isMatch(String s, String p) {
-        boolean[][] dyp=new boolean[1000][1000];
+        boolean[][] dyp=new boolean[s.length()+1][p.length()+1];
         dyp[0][0]=true;
-        for(int i=1;i<s.length();i++) {
+        for(int i=1;i<=s.length();i++) {
         	dyp[i][0]=false;
         }
-        for(int i=1;i<p.length();i++) {
+        for(int i=1;i<=p.length();i++) {
         	dyp[0][i]=(p.charAt(i-1)=='*')&&(dyp[0][i-1]);
         }
         for(int j=1;j<=p.length();j++){
@@ -18,7 +18,7 @@ public class q44 {
         		if(p.charAt(j-1)!='*')
         			dyp[i][j]=dyp[i-1][j-1]&&(p.charAt(j-1)==s.charAt(i-1)||p.charAt(j-1)=='?');
         		else
-        			dyp[i][j]=dyp[i-1][j]||dyp[i][j-1];
+        			dyp[i][j]=dyp[i][j-1]||dyp[i-1][j];
         	}
         }
         return dyp[s.length()][p.length()];
